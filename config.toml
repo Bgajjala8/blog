@@ -53,8 +53,6 @@ summaryLength = 20
     # for example you may want to include external JS library.
     customJS = ["js/abc.js", "js/xyz.js", "https://code.jquery.com/jquery-3.4.1.js"]
 
-[site]
-   facebook_admin = []
 # Main menu which appears below site header.
 [[menu.main]]
 name = "Home"
