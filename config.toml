@@ -1,4 +1,4 @@
-baseURL = "https://bgajjala.dev"
+baseURL = "http://bgajjala.dev"
 languageCode = "en-us"
 title = "My personal blog"
 theme = "ezhil"
