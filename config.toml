@@ -21,12 +21,14 @@ paginate = 10
 # Number of characters to show in summary.
 summaryLength = 20
 
+[params.opengraph.facebook]     
+   admins = []
+
 [params]
     # Blog subtitle which appears below blog title. Supports markdown.
     subtitle = "Coder and tech explorer"
 
     # Content types which are included in home page recent posts list.
-    admins = [] # array of Facebook IDs
     mainSections = ["posts"]
 
     # Content types which are excludes Disqus comments.
