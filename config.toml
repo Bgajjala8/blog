@@ -21,9 +21,6 @@ paginate = 10
 # Number of characters to show in summary.
 summaryLength = 20
 
-[params.opengraph.facebook]     
-   admins = []
-
 [params]
     # Blog subtitle which appears below blog title. Supports markdown.
     subtitle = "Coder and tech explorer"
@@ -56,6 +53,8 @@ summaryLength = 20
     # for example you may want to include external JS library.
     customJS = ["js/abc.js", "js/xyz.js", "https://code.jquery.com/jquery-3.4.1.js"]
 
+[social]
+   facebook_admin = ""
 # Main menu which appears below site header.
 [[menu.main]]
 name = "Home"
