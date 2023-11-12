@@ -26,6 +26,7 @@ summaryLength = 20
     subtitle = "Coder and tech explorer"
 
     # Content types which are included in home page recent posts list.
+    admins = [] # array of Facebook IDs
     mainSections = ["posts"]
 
     # Content types which are excludes Disqus comments.
