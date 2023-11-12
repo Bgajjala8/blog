@@ -53,7 +53,7 @@ jobs:
       - name: Pulling submodules
         run: |
           git submodule init 
-          git submodule update
+          git submodule sync
       - name: Build with Hugo
         env:
           # For maximum backward compatibility with Hugo modules
