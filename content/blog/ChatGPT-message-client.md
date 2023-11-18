@@ -14,7 +14,7 @@ Initially, I requested that Chat GPT provide me with a diagram of the architectu
 *   Can you draw me a simple one server distributed chat system architecture diagram?
 
 ```
- +------------+  
+                            +------------+  
                             |            |  
                             |  Client 1  |  
                             |            |  
@@ -139,7 +139,7 @@ public class Message RelayClient {
 }
 ```
 
-Initially, there were several issues with my question. It was not specific enough, and ChatGPt needed more information in order to provide an accurate response. For example, I didn’t mention that I wanted logging or that the client should be connected to port 1234. Additionally, the server code had some errors, such as comparing `Socket` objects instead of their `RemoteSocketAddress` strings, and using the wrong `PrintWriter` to send messages. These issues were addressed in the revised code provided by ChatGPt.
+Initially, there were several issues with my question. It was not specific enough, and ChatGPt needed more information in order to provide an accurate response. For example, I didn’t mention that I wanted logging or that the client should be connected to port 1234. Additionally, the server code had some errors, such as comparing `Socket` objects instead of their `RemoteSocketAddress` strings, and using the wrong `PrintWriter` to send messages. These issues were addressed in the revised code provided by ChatGPT.
 
 The final code implementation provided by ChatGPt was successful in addressing the issues with the initial code and providing a functional messaging system.
 
@@ -250,7 +250,7 @@ public class MessageRelayClient {
 }
 ```
 
-**Local test**
+**Local Test**
 
 It took me around 3 hours to get this “built”. It was a fun experiment, and I can see the potential for this technology to help many people understand complex concepts quickly. If I were to write this code from scratch, it would have easily taken me half a day or more. However, even though it would have taken longer, I believe I would have learned more in the process. Despite this, being able to prototype this code and see it work has given me a confidence boost and shown me what to expect in the world of distributed systems.
 
