@@ -14,7 +14,7 @@ Initially, I requested that chatGPT provide me with a diagram of the architectur
 *   Can you draw me a simple one server distributed chat system architecture diagram?
 
 ```
- +------------+  
+                            +------------+  
                             |            |  
                             |  Client 1  |  
                             |            |  
@@ -41,213 +41,23 @@ My next step was to create the server.
 
 This is the server chatGPT provided me
 
-**messageRelayServer.java**
+{{<github-code-snippets 65a51e8550f4412abe5cb628593f38e5>}}
 
-```java
- import java.io.*;
- import java.net.*;
- import java.util.*;
-
- public class Message RelayServer {
-
-     public static void main(String[] args) throws IOException {
-         // Create a new server socket on localhost port 1234
-         ServerSocket serverSocket = new ServerSocket(1234);
-         System.out.println("MessageRelayServer started on localhost:1234");
-         // Create a list to store connected clients List<Socket> clients = new ArrayList>();
-         // Continuously accept new client connections while (true) {
-         // Accept a new client connection
-         Socket client = serverSocket.accept();
-         // Add the new client to the list of connected clients clients.add(client);
-         // Print a message to the console
-
-         System.out.println("New client connected: + client.getRemoteSocketAddress());
-             // Create a new thread to handle communication with the client new Thread(() → {
-             try {
-
-
-             }
-
-         }
-     }
-     // Create input and output streams for the client
-     BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));
-     PrintWriter out = new PrintWriter(client.getOutputStream(), true);
-     // Continuously read messages from the client
-     while (true) {}
-     // Read a message from the client String message = in.readLine();
-     // Print the message to the console
-     System.out.println("Received message from " + client.getRemoteSocketAddress() +
-         +message);
-     // Send the message to all other clients, excluding the client that sent the message for (Socket otherClient : clients) {
- }
- if (otherClient client) {}
- out.println(message);
- }
- catch (IOException e) {
-     e.printStackTrace();
- }).start();
- }
-```
-
-Now that the server is up and running time to create the clients….
+Now that the server is up and running time to create the clients…
 
 *   Now, can you write a client that sends and listens to this server?
 
 The client implementation provided by chatGPT
 
-**messageRelayClient.java**
-
-```java
-import java.io.*;
-import java.net.*;
-import java.util.logging.*;
-
-public class Message RelayClient {
-
-    private static final Logger logger = Logger.getLogger(MessageRelayClient.class.getName());
-    public static void main(String[] args) throws IOException {
-        // Create a socket to connect to the server
-        Socket socket = new Socket("localhost", 1234);
-        // Create input and output streams to read from and write to the server BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream())); PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
-        // Listen for messages from the server in a separate thread
-        Thread listener = new Thread(()→ {
-                try {
-                    String response;
-                    while ((response = in .readLine()) = null) {}
-                    Logger.info("Received message from server: System.out.println(response);
-                    }
-                    catch (IOException e) {
-                        +response);
-                    Logger.severe("Error reading from server: + e.getMessage());
-
-                    }
-                });
-                 Listener.start();
-        }
-
-    }
-    // Read input from the CLI and write it to the server
-    BufferedReader cli = new BufferedReader(new InputStreamReader(System.in));
-    String input;
-    while ((input = cli.readLine()) = null) {
-        out.println(input);
-        logger.info("Sent message to server: " + input);
-    }
-        // Close the socket when done 
-        socket.close();
-```
+{{<github-code-snippets 675239a3964bf6e56ed298c309acaec9>}}
 
 Initially, there were several issues with my question. It was not specific enough, and chatGPT needed more information in order to provide an accurate response. For example, I didn’t mention that I wanted logging or that the client should be connected to port 1234. Additionally, the server code had some errors, such as comparing `Socket` objects instead of their `RemoteSocketAddress` strings, and using the wrong `PrintWriter` to send messages. These issues were addressed in the revised code provided by chatGPT.
 
 The final code implementation provided by chatGPT was successful in addressing the issues with the initial code and providing a functional messaging system.
 
-**messageRelayServer.java**
+{{<github-code-snippets cfd4febb12f0891f7ae5d9f7bd33cf50>}}
 
-```java
-import java.io.\*;  
-import java.net.\*;  
-import java.util.\*;  
-  
-public class MessageRelayServer {  
-  public static void main(String\[\] args) throws IOException {  
-    // Create a new server socket on localhost port 1234  
-    ServerSocket serverSocket = new ServerSocket(1234);  
-    System.out.println("MessageRelayServer started on localhost:1234");  
-  
-    // Create a list to store connected clients  
-    List<Socket> clients = new ArrayList<>();  
-  
-    // Continuously accept new client connections  
-    while (true) {  
-      // Accept a new client connection  
-      Socket client = serverSocket.accept();  
-  
-      // Add the new client to the list of connected clients  
-      clients.add(client);  
-  
-      // Print a message to the console  
-      System.out.println("New client connected: " + client.getRemoteSocketAddress());  
-  
-      // Create a new thread to handle communication with the client  
-      new Thread(() -> {  
-        try {  
-          // Create input and output streams for the client  
-          BufferedReader in = new BufferedReader(new InputStreamReader(client.getInputStream()));  
-          // PrintWriter out = new PrintWriter(client.getOutputStream(), true); -> This was sending it to itself   
-  
-          // Continuously read messages from the client  
-          while (true) {  
-            // Read a message from the client  
-            String message = in.readLine();  
-  
-            // Print the message to the console  
-            System.out.println("Received message from " + client.getRemoteSocketAddress() + ": " + message);  
-  
-            // Send the message to all other clients, excluding the client that sent the message  
-            for (Socket otherClient : clients) {  
-              if (!otherClient.getRemoteSocketAddress().equals(client.getRemoteSocketAddress())) {  
-                //Added: -> This now allow to write to other clients   
-                PrintWriter otherClientOut = new PrintWriter(otherClient.getOutputStream(), true);  
-                otherClientOut.println(message);  
-    
-              }  
-            }  
-          }  
-        } catch (IOException e) {  
-          e.printStackTrace();  
-        }  
-      }).start();  
-    }  
-  }  
-}
-```
-
-**messageRelayClient.java**
-
-```java
-import java.io.\*;  
-import java.net.\*;  
-import java.util.logging.\*;  
-  
-public class MessageRelayClient {  
-    private static final Logger logger = Logger.getLogger(MessageRelayClient.class.getName());  
-  
-    public static void main(String\[\] args) throws IOException {  
-        // Create a socket to connect to the server  
-        Socket socket = new Socket("localhost", 1234);  
-          
-        // Create input and output streams to read from and write to the server  
-        BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));  
-        PrintWriter out = new PrintWriter(socket.getOutputStream(), true);  
-  
-        // Listen for messages from the server in a separate thread  
-        Thread listener = new Thread(() -> {  
-            try {  
-                String response;  
-                while ((response = in.readLine()) != null) {  
-                    logger.info("Received message from server: " + response);  
-                    System.out.println(response);  
-                }  
-            } catch (IOException e) {  
-                logger.severe("Error reading from server: " + e.getMessage());  
-            }  
-        });  
-        listener.start();  
-  
-        // Read input from the CLI and write it to the server  
-        BufferedReader cli = new BufferedReader(new InputStreamReader(System.in));  
-        String input;  
-        while ((input = cli.readLine()) != null) {  
-            out.println(input);  
-            logger.info("Sent message to server: " + input);  
-        }  
-  
-        // Close the socket when done  
-        socket.close();  
-    }  
-}
-```
+{{<github-code-snippets 6b324297e72ab561782e116403eacaa8>}}
 
 **Local test**
 
