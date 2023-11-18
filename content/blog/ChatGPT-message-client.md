@@ -136,6 +136,7 @@ public class Message RelayClient {
     }
         // Close the socket when done 
         socket.close();
+}
 ```
 
 Initially, there were several issues with my question. It was not specific enough, and ChatGPt needed more information in order to provide an accurate response. For example, I didn’t mention that I wanted logging or that the client should be connected to port 1234. Additionally, the server code had some errors, such as comparing `Socket` objects instead of their `RemoteSocketAddress` strings, and using the wrong `PrintWriter` to send messages. These issues were addressed in the revised code provided by ChatGPt.
