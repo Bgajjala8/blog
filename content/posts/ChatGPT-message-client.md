@@ -66,4 +66,6 @@ It took me around 3 hours to get this “built”. It was a fun experiment, and 
 
 Although there is much more complexity in distributed systems, with the addition of components such as load balancers, data stores, and message brokers, I can say that using chatGPT has really helped me gain a glimpse into what the world of a distributed systems engineer may look like. I’m excited to see the future possibilities that this technology brings forward.
 
-Code: [https://github.com/Bgajjala8/chatGPTExperiment](https://github.com/Bgajjala8/chatGPTExperiment)
+[Code](https://github.com/Bgajjala8/chatGPTExperiment)
+
+[Medium Article](https://medium.com/@bharath.gajjala8/exploring-the-potential-of-chat-gpt-a-journey-into-prototyping-a-distributed-system-58839b9794d5)
