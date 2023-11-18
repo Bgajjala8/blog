@@ -43,7 +43,7 @@ This is the server chatGPT provided me
 
 **messageRelayServer.java**
 
-```
+```java
  import java.io.*;
  import java.net.*;
  import java.util.*;
@@ -98,7 +98,7 @@ The client implementation provided by Chat GPT
 
 **messageRelayClient.java**
 
-```
+```java
 import java.io.*;
 import java.net.*;
 import java.util.logging.*;
@@ -144,7 +144,7 @@ The final code implementation provided by ChatGPt was successful in addressing t
 
 **messageRelayServer.java**
 
-```
+```java
 import java.io.\*;  
 import java.net.\*;  
 import java.util.\*;  
@@ -205,7 +205,7 @@ public class MessageRelayServer {
 
 **messageRelayClient.java**
 
-```
+```java
 import java.io.\*;  
 import java.net.\*;  
 import java.util.logging.\*;  
