@@ -1,6 +1,6 @@
-baseURL = "bgajjala.dev"
+baseURL = "https://bgajjala.dev/"
 languageCode = "en-us"
-title = "My personal blog"
+title = "Bharath Gajjala"
 theme = "ezhil"
 
 copyright = "© Copyright notice"
@@ -16,7 +16,7 @@ googleAnalytics = "UA-123-45"
 disqusShortname = "localhost"
 
 # Number of posts to show in recent posts list (Optional). Defaults to 10.
-paginate = 10
+paginate = 5
 
 # Number of characters to show in summary.
 summaryLength = 20
@@ -56,7 +56,7 @@ summaryLength = 20
 # Main menu which appears below site header.
 [[menu.main]]
 name = "Home"
-url = "/"
+url = "/blog"
 weight = 1
 
 [[menu.main]]
@@ -79,12 +79,18 @@ weight = 4
 [[params.social]]
 name = "Github"
 icon = "github"
-url = "https://github.com/vividvilla/ezhil"
+url = "https://github.com/Bgajjala8"
 
 [[params.social]]
 name = "Twitter"
 icon = "twitter"
-url = "https://twitter.com/gohugoio"
+url = "https://twitter.com/bgajjala8"
+
+
+[[params.social]]
+name = "Linkedin"
+icon = "linkedin"
+url = "https://www.linkedin.com/in/bharath-g8"
 
 # Enable tags.
 [taxonomies]
