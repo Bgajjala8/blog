@@ -54,25 +54,25 @@ summaryLength = 20
     customJS = ["js/abc.js", "js/xyz.js", "https://code.jquery.com/jquery-3.4.1.js"]
 
 # Main menu which appears below site header.
-[[menu.main]]
-name = "Home"
-url = "/blog"
-weight = 1
-
-[[menu.main]]
-name = "All posts"
-url = "/posts"
-weight = 2
-
-[[menu.main]]
-name = "About"
-url = "/about"
-weight = 3
-
-[[menu.main]]
-name = "Tags"
-url = "/tags"
-weight = 4
+#[[menu.main]]
+#name = "Home"
+#url = "/blog"
+#weight = 1
+#
+#[[menu.main]]
+#name = "All posts"
+#url = "/posts"
+#weight = 2
+#
+#[[menu.main]]
+#name = "About"
+#url = "/about"
+#weight = 3
+#
+#[[menu.main]]
+#name = "Tags"
+#url = "/tags"
+#weight = 4
 
 # Social media links which shows up on site header.
 # Uses feather icons for icons. You can [search icon names from here](https://feathericons.com/).
@@ -82,15 +82,19 @@ icon = "github"
 url = "https://github.com/Bgajjala8"
 
 [[params.social]]
+name = "Linkedin"
+icon = "linkedin"
+url = "https://www.linkedin.com/in/bharath-g8"
+
+[[params.social]]
 name = "Twitter"
 icon = "twitter"
 url = "https://twitter.com/bgajjala8"
 
-
 [[params.social]]
-name = "Linkedin"
-icon = "linkedin"
-url = "https://www.linkedin.com/in/bharath-g8"
+name = "Mail"
+icon = "mail"
+url = "mailto:bharath.gajjala8@gmail.com"
 
 # Enable tags.
 [taxonomies]
