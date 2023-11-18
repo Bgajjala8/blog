@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "Bharath Gajjala"
 theme = "ezhil"
 
-copyright = "© Copyright notice"
+copyright = "bgajjala© Copyright notice"
 
 # Enable syntax highlighting.
 pygmentsstyle = "solarized-dark"
