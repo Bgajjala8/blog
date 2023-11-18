@@ -19,7 +19,7 @@ disqusShortname = "localhost"
 paginate = 5
 
 # Number of characters to show in summary.
-summaryLength = 20
+summaryLength = 10
 
 [params]
     # Blog subtitle which appears below blog title. Supports markdown.
