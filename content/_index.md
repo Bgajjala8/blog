@@ -6,4 +6,4 @@ Welcome to my digital corner! I'm Bharath, an enthusiastic software engineer wit
 
 With nearly 3 years of hands-on experience, I've played a key role as a core developer at [General Motors](https://www.gm.com/), contributing significantly to the [CarBravo](https://www.carbravo.com/) domain and spearheading projects within the [OnStar Services'](https://www.onstar.com/) streaming infrastructure. 
 
-Presently engaged in the [BrightDrop](https://www.gobrightdrop.com) project, I am building real-time package tracking services and infrastructure to provide comprehensive visibility into customer products. Feel free to reach out if you'd like to chat or brainstorm ideas for future tech endeavors. 😊
+Presently engaged in the [BrightDrop](https://www.gobrightdrop.com) project, I am building real-time package tracking services and infrastructure. Feel free to reach out if you'd like to chat or brainstorm ideas for future tech endeavors. 😊
