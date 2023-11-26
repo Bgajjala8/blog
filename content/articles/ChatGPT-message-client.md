@@ -4,7 +4,7 @@ date: 2022-12-12T22:46:48-06:00
 draft: false
 disqus: false
 ---
-As an early career engineer, I have always been fascinated by the vast and diverse world of engineering. One area that has particularly captivated my attention is distributed systems, and I have been eager to learn more about them. Recently, I have been hearing a lot about chatGPT, and I was intrigued by the potential of this approach as a tool for learning about distributed systems.
+As an engineer, I have always been fascinated by the vast and diverse world of engineering. One area that has particularly captivated my attention is distributed systems, and I have been eager to learn more about them. Recently, I have been hearing a lot about chatGPT, and I was intrigued by the potential of this approach as a tool for learning about distributed systems.
 
 In order to explore the potential of this approach, I decided to conduct an experiment using chatGPT to prototype a simple distributed chat system. I was curious to see if chatGPT could provide the guidance and assistance needed to prototype such a system, and whether it could be an effective tool for early career engineers like myself.
 
