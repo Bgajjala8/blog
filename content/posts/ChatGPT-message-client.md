@@ -1,6 +1,7 @@
 ---
 title: "Building a messaging system with ChatGPT"
 date: 2022-12-12T22:46:48-06:00
+tags: [Tech, ChatGPT]
 draft: false
 disqus: false
 ---

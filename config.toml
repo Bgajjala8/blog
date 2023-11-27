@@ -26,7 +26,7 @@ summaryLength = 10
     subtitle = "Coder and tech explorer"
 
     # Content types which are included in home page recent posts list.
-    mainSections = ["articles"]
+    mainSections = ["posts"]
 
     # Content types which are excludes Disqus comments.
     disableDisqusTypes = ["page", "posts", "articles"]
@@ -50,7 +50,7 @@ summaryLength = 10
 
     # Custom list of Javascript files to load. Just like custom CSS you can place js files under
     # `static/js` folder and specify path here as `js/script-name.js`. You can also specify full url,
-    # for example you may want to include external JS library.
+    # for example you may want to include external JS library
     customJS = ["js/abc.js", "js/xyz.js", "https://code.jquery.com/jquery-3.4.1.js"]
 
 # Main menu which appears below site header.
@@ -60,24 +60,29 @@ url = "/"
 weight = 1
 
 [[menu.main]]
-name = "Articles"
-url = "/articles"
+name = "Posts"
+url = "/posts"
 weight = 2
 
+#[[menu.main]]
+#name = "Journal"
+#url = "/journals"
+#weight = 3
+
+#[[menu.main]]
+#name = "Projects"
+#url = "/projects"
+#weight = 4
+
 [[menu.main]]
-name = "Journals"
-url = "/journals"
+name = "Tags"
+url = "/tags"
 weight = 3
 
-[[menu.main]]
-name = "Projects"
-url = "/projects"
-weight = 4
-
-[[menu.main]]
-name = "Random"
-url = "/random"
-weight = 5
+#[[menu.main]]
+#name = "Random"
+#url = "/random"
+#weight = 5
 
 # Social media links which shows up on site header.
 # Uses feather icons for icons. You can [search icon names from here](https://feathericons.com/).
