@@ -1,5 +1,5 @@
 ---
-title: "Zen in Bits: Digitally Detoxing Myself"
+title: "Zen in Bits: Digitally Detox - 1"
 date: 2023-11-27T04:04:13+00:00
 tags: [Zen in Bits, Journal, Self Improvement]
 draft: false
@@ -23,4 +23,4 @@ By the end of this period (starting today and rolling into next year), I aim to 
 1. **Testing if I can spend more quality time with my family (less on my phone)**
 2. **Holidays. It's that time when everyone's sharing stories, and I usually find myself glued to all types of media (plus Amazon). By taking a step back, can I gain a new perspective and use this time for things I actually want to do?**
 
-So, here's I go!
+So, here I go!
