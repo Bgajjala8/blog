@@ -1,7 +1,7 @@
 ---
 title: "Zen in Bits: Digitally Detoxing Myself"
 date: 2023-11-27T04:04:13+00:00
-tags: [Tech, ChatGPT]
+tags: [Zen in Bits, Journal, Self Improvement]
 draft: false
 disqus: false
 ---
