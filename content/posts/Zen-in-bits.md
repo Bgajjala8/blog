@@ -1,5 +1,5 @@
 ---
-title: "Zen in Bits: Digitally Detox - 1"
+title: "Zen in Bits: A Digital Detox - 1"
 date: 2023-11-27T04:04:13+00:00
 tags: [Zen in Bits, Journal, Self Improvement]
 draft: false
