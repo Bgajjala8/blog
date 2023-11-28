@@ -86,6 +86,7 @@ weight = 3
 
 # Social media links which shows up on site header.
 # Uses feather icons for icons. You can [search icon names from here](https://feathericons.com/).
+
 [[params.social]]
 name = "Github"
 icon = "github"
@@ -106,6 +107,10 @@ name = "Mail"
 icon = "mail"
 url = "mailto:bharath.gajjala8@gmail.com"
 
+[[params.social]]
+name = "RSS"
+icon = "rss"
+url = "/index.xml"
 # Enable tags.
 [taxonomies]
    tag = "tags"
