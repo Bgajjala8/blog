@@ -2,8 +2,6 @@
 title: "Bharath Gajjala"
 type: "page"
 ---
-Welcome to my digital corner! I'm Bharath, an enthusiastic software engineer with a primary focus on exploring the intricacies of distributed computing and delving deep into the world of low-level operating systems.
+Hi, I’m Bharath Gajjala. I’m a software engineer focused on distributed systems and building scalable, reliable solutions at the enterprise level. I enjoy solving complex problems that directly affect our quality of life as humans.
 
-With nearly 3 years of hands-on experience, I've played a key role as a core developer at [General Motors](https://www.gm.com/), contributing significantly to the [CarBravo](https://www.carbravo.com/) domain and spearheading projects within the [OnStar Services'](https://www.onstar.com/) streaming infrastructure. 
-
-Feel free to reach out if you'd like to chat or brainstorm ideas for future tech endeavors. 😊
+Based in the SF Bay Area, I write about engineering, system design, and the lessons I’ve learned along the way. I’d love to meet for coffee, exchange ideas, and make new friends—feel free to reach out! 😊
