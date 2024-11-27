@@ -194,7 +194,6 @@ public class OnPremKafkaTemplate extends RouteBuilder implements RouteTemplate {
 }
 ```
 ### How It Works
-### Configuration Overview
 
 The `RouteConfig` interface allows defining **dynamic routes** for Apache Camel using configuration files (e.g., YAML) or environment variables. Each route can specify its **source**, **target**, and additional metadata, providing flexibility and modularity in setting up bridges.
 
