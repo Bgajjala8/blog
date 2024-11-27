@@ -220,7 +220,7 @@ The `RouteConfig` interface allows defining **dynamic routes** for Apache Camel 
 
 ---
 
-### How It Works
+### Operational benefits
 
 1. **Centralized Configurations:**
    - All route definitions are stored in a single configuration file, reducing complexity and improving manageability.
