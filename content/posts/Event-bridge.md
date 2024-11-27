@@ -237,6 +237,4 @@ By centralizing and standardizing route configurations, `RouteConfig` ensures sc
 
 ## Conclusion
 
-EventBridge, powered by Apache Camel, made it easier to handle cross-cloud messaging by simplifying the configuration of routes and abstracting the complexities of integration. With tools like `RouteConfig` and reusable templates, it allowed seamless communication between systems like **Kafka** and **Azure Service Bus** while supporting bidirectional flows.
-
-This solution was lightweight, flexible, and easy to extend, making it a practical approach for connecting on-prem and cloud services without significant overhead.
+EventBridge, powered by Apache Camel, made it easier to handle cross-cloud messaging by simplifying the configuration of routes and abstracting the complexities of integration. This solution was lightweight, flexible, and easy to extend, making it a practical approach for connecting on-prem and cloud services without significant overhead.
