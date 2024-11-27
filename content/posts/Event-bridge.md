@@ -194,33 +194,50 @@ public class OnPremKafkaTemplate extends RouteBuilder implements RouteTemplate {
 }
 ```
 ### How It Works
-Customer-Defined Configuration (through YAML):
-Users specify properties like source.topic, destination.queue, and connection details in a configuration file or environment variables.
-Apache Camel Handles Integration:
-Camel abstracts the connection to Kafka and Azure Service Bus, managing protocols, retries, and message transformations.
-Bidirectional Communication:
-Routes can be configured for Kafka ↔ Azure Service Bus, ensuring bidirectional message flow.
-Why Apache Camel?
-Apache Camel made it easy to:
+### Configuration Overview
 
-Abstract complex integration logic and protocols.
-Support a wide range of cloud and on-prem connectors.
-Enable declarative, configuration-driven routing, allowing customers to focus on high-level workflows.
-Applications and Benefits
+The `RouteConfig` interface allows defining **dynamic routes** for Apache Camel using configuration files (e.g., YAML) or environment variables. Each route can specify its **source**, **target**, and additional metadata, providing flexibility and modularity in setting up bridges.
 
-EventBridge with Apache Camel offers several advantages:
+---
 
-Customer Flexibility: Customers can define their own route bridges between systems without needing deep technical expertise in the underlying protocols.
-Seamless Integration: Apache Camel handles the complexities of connecting messaging systems, ensuring reliable communication.
-Business Continuity: EventBridge ensures messages are delivered reliably, even across disparate environments.
-Testing and Proofs of Concept: Teams can simulate multi-cloud architectures to validate their solutions before deployment.
-Real-World Use Case: Kafka ↔ Azure Service Bus
+### Key Features
 
-A typical scenario involved connecting an on-prem Kafka cluster with Azure Service Bus:
+1. **Dynamic Routing:**
+   - Enables defining multiple routes in a centralized configuration file under the `config` prefix.
+   - Each route includes details for:
+     - **Source:** The originating system (e.g., Kafka).
+     - **Target:** The destination system (e.g., Azure Service Bus).
 
-Use Case: A legacy application produced events to Kafka. These events needed to be routed to Azure Service Bus for further processing in the cloud.
-Solution: A configurable route was set up in EventBridge, allowing seamless event transfer:
-Step 1: Kafka messages were consumed using the kafka component.
-Step 2: Apache Camel transformed and forwarded the messages to Azure Service Bus using the azure-servicebus component.
-Step 3: Logs and monitoring were enabled for visibility into the message flow.
-This solution enabled the customer to transition their workload to the cloud without disrupting existing systems.
+2. **Metadata for Flexibility:**
+   - Each route has detailed metadata, including:
+     - **Topic Name (Optional):** The topic to route messages through.
+     - **Cloud Service Queue:** Specifies the service type (e.g., `AZURE_SERVICEBUS`, `ONPREM`).
+     - **Unique Identifier:** A string to uniquely identify each topic.
+
+3. **Conditional Routing:**
+   - Routes can be enabled or disabled using the `enable` flag, making it easy to toggle routes during testing or deployment.
+   - Supports message transformation through the `transformMessage` flag, which allows modifying the message payload if needed. For example, you can dynamically specify a transformer class by including it in the classpath.
+
+
+---
+
+### How It Works
+
+1. **Centralized Configurations:**
+   - All route definitions are stored in a single configuration file, reducing complexity and improving manageability.
+
+2. **Dynamic Deployment:**
+   - As new routes are added or updated, they are picked up without modifying the core logic of the system.
+
+3. **Seamless Integration:**
+   - This configuration feeds into Camel templates to dynamically create bridges between systems such as:
+     - **Kafka ↔ Azure Service Bus**
+     - **On-Prem Kafka ↔ Cloud Services**
+
+By centralizing and standardizing route configurations, `RouteConfig` ensures scalability and ease of management in multi-cloud and hybrid-cloud messaging systems.
+
+## Conclusion
+
+EventBridge, powered by Apache Camel, made it easier to handle cross-cloud messaging by simplifying the configuration of routes and abstracting the complexities of integration. With tools like `RouteConfig` and reusable templates, it allowed seamless communication between systems like **Kafka** and **Azure Service Bus** while supporting bidirectional flows.
+
+This solution was lightweight, flexible, and easy to extend, making it a practical approach for connecting on-prem and cloud services without significant overhead.
