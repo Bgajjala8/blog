@@ -2,7 +2,7 @@
 title: "Zen in Bits: A Digital Detox - 1"
 date: 2023-11-27T04:04:13+00:00
 tags: [Zen in Bits, Journal, Self Improvement]
-draft: false
+draft: true
 disqus: false
 ---
 In the age of constant notifications and never-ending scrolling feeds, I catch myself yearning for some tranquility and peace. But let's be real, unplugging is no walk in the park. Our lives are all tangled up in this web, whether we realize it or not. Work, communication—everything seems to demand a phone and some app.
