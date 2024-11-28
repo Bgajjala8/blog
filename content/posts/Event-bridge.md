@@ -199,6 +199,7 @@ The `RouteConfig` interface allows defining **dynamic routes** for Apache Camel 
 
 ---
 
+
 ### Key Features
 
 1. **Dynamic Routing:**
@@ -234,6 +235,23 @@ The `RouteConfig` interface allows defining **dynamic routes** for Apache Camel 
      - **On-Prem Kafka ↔ Cloud Services**
 
 By centralizing and standardizing route configurations, `RouteConfig` ensures scalability and ease of management in multi-cloud and hybrid-cloud messaging systems.
+
+---
+### Addressing Infinite Loops
+
+One of the major issues we encountered during implementation was the risk of **infinite loops**. This could occur when a bridged message was picked up again by the system, causing it to loop through the routes repeatedly.
+
+To prevent this, we introduced a custom metadata tagging for messages being bridged, using a tag called **x-eventbridge-metadata**. This metadata allowed us to:
+
+1. **Tag messages that had already been bridged:**  
+   We included metadata with a unique identifier to track messages as they moved through the routes.
+
+2. **Filter out bridged messages:**  
+   Routes were configured to ignore messages with the `x-eventbridge-metadata` tag, ensuring they wouldn't loop back into the system.
+
+3. **Handle unprocessed messages gracefully:**  
+   In cases where messages were misrouted or encountered errors, they were sent to an empty queue for further inspection or simply logged for debugging.
+
 
 ## Conclusion
 
